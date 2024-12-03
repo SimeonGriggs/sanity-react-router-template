@@ -3,7 +3,10 @@ import {handle} from 'hono/vercel'
 import honoServer from './server'
 
 export function GET() {
-  const app = waitUntil(honoServer())
+  let app
+  waitUntil(async () => {
+    app = await honoServer()
+  })
   return handle(app)
 }
 
