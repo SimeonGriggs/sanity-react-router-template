@@ -26,6 +26,7 @@
     "@sanity/ui": "^2.8.25",
     "@sanity/vision": "^3.65.0",
     "@sanity/visual-editing": "^2.10.0",
+    "@vercel/functions": "^1.5.1",
     "groq": "^3.65.0",
     "hono": "^4.6.12",
     "isbot": "^5.1.17",

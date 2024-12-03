@@ -56,6 +56,9 @@ importers:
       '@sanity/visual-editing':
         specifier: ^2.10.0
         version: 2.10.0(@sanity/client@6.22.5)(react-dom@18.3.1(react@18.3.1))(react-router@7.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      '@vercel/functions':
+        specifier: ^1.5.1
+        version: 1.5.1
       groq:
         specifier: ^3.65.0
         version: 3.65.0
@@ -2074,6 +2077,15 @@ packages:
       codemirror: '>=6.0.0'
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
+
+  '@vercel/functions@1.5.1':
+    resolution: {integrity: sha512-cCdrWa4sUkNE8WjZu9ODA4Q3d92Y333bCL3zebvQ8XCOH0MCy37q3rQ02sJU93mn7BuZyEk5hWBnEtfOb6Sr2Q==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      '@aws-sdk/credential-provider-web-identity': '*'
+    peerDependenciesMeta:
+      '@aws-sdk/credential-provider-web-identity':
+        optional: true
 
   '@vercel/stega@0.1.2':
     resolution: {integrity: sha512-P7mafQXjkrsoyTRppnt0N21udKS9wUmLXHRyP9saLXLHw32j/FgUJ3FscSWgvSqRs4cj7wKZtwqJEvWJ2jbGmA==}
@@ -7516,6 +7528,8 @@ snapshots:
       - '@codemirror/language'
       - '@codemirror/lint'
       - '@codemirror/search'
+
+  '@vercel/functions@1.5.1': {}
 
   '@vercel/stega@0.1.2': {}
 
