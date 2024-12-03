@@ -1,20 +1,17 @@
-// import {handle} from 'hono/vercel'
-// import honoServer from './server'
+import {waitUntil} from '@vercel/functions'
+import {handle} from 'hono/vercel'
+import honoServer from './server'
+
+export function GET() {
+  const app = waitUntil(honoServer())
+  return handle(app)
+}
 
 // const app = await honoServer()
-import {Hono} from 'hono'
-import {handle} from 'hono/vercel'
+// const handler = handle(app)
 
-const app = new Hono().basePath('/')
-
-app.get('/', (c) => {
-  return c.json({message: "Congrats! You've deployed Hono to Vercel"})
-})
-
-const handler = handle(app)
-
-export const GET = handler
-export const POST = handler
-export const PATCH = handler
-export const PUT = handler
-export const OPTIONS = handler
+// export const GET = handler
+// export const POST = handler
+// export const PATCH = handler
+// export const PUT = handler
+// export const OPTIONS = handler
