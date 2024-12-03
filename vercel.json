@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/vercel"
+      "destination": "/api"
     }
   ]
 }
