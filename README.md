@@ -1,10 +1,5 @@
 # Full-featured Sanity Studio + React Router Vite Template
 
-> [!WARNING]  
-> This template has been updated to React Router 7, but will not currently deploy to Vercel, as their build plugin has not yet been updated. Update it yourself to adapt to the server of your choice. It will be updated when Vercel updates the build plugin.
-
---
-
 Batteries-included [React Router 7](https://reactrouter.com) website using Vite with [Vercel's deployment preset](https://vercel.com/docs/frameworks/remix) with [Visual Editing](https://www.sanity.io/docs/visual-editing) for interactive live-preview inside [Presentation](https://www.sanity.io/docs/presentation) powered by an embedded [Sanity Studio](https://www.sanity.io/studio).
 
 ![Presentation tool in Sanity Studio](./img/sanity-remix-presentation.png)
