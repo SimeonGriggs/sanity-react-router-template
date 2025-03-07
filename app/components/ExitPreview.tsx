@@ -14,7 +14,7 @@ export function ExitPreview() {
         method="POST"
       >
         <button
-          className="bg-black p-4 leading-none font-bold text-white"
+          className="bg-black p-4 font-bold leading-none text-white"
           type="submit"
         >
           Exit Preview Mode

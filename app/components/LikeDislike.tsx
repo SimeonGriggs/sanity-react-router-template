@@ -1,5 +1,5 @@
-import { useFetcher, useLocation } from 'react-router';
 import {ThumbsDown, ThumbsUp} from 'lucide-react'
+import {useFetcher, useLocation} from 'react-router'
 
 type LikeDislikeProps = {
   id: string

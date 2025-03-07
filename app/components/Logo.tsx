@@ -1,6 +1,6 @@
 import {Link} from 'react-router'
-import {STUDIO_BASEPATH} from '~/sanity/constants'
 
+import {STUDIO_BASEPATH} from '~/sanity/constants'
 import type {LogoProps} from '~/types/home'
 
 export function Logo(props: LogoProps) {

@@ -1,5 +1,5 @@
-import { useFetcher } from 'react-router';
 import {Moon, Sun} from 'lucide-react'
+import {useFetcher} from 'react-router'
 
 import type {ThemePreference} from '~/types/themePreference'
 

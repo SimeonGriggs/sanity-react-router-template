@@ -1,6 +1,7 @@
 import * as queryStore from '@sanity/react-loader'
 
 import {client} from '~/sanity/client'
+
 import {STUDIO_BASEPATH} from './constants'
 
 const clientWithToken = client.withConfig({

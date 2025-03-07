@@ -1,9 +1,9 @@
-import {Link} from 'react-router'
 import type {EncodeDataAttributeCallback} from '@sanity/react-loader'
+import {Link} from 'react-router'
 
 import {RecordCover} from '~/components/RecordCover'
-import type {RecordStub} from '~/types/record'
 import {STUDIO_BASEPATH} from '~/sanity/constants'
+import type {RecordStub} from '~/types/record'
 
 type RecordsProps = {
   records: RecordStub[]
@@ -14,7 +14,7 @@ export function Records(props: RecordsProps) {
   const {records = [], encodeDataAttribute} = props
 
   return records.length > 0 ? (
-    <ul className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:gap-12 lg:grid-cols-4">
+    <ul className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
       {records.map((record, recordI) => (
         <li key={record._id} className="group relative flex flex-col">
           <div

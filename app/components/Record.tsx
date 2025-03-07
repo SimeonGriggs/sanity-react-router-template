@@ -29,7 +29,7 @@ export function Record({data}: RecordProps) {
         </div>
         <LikeDislike id={_id} likes={likes} dislikes={dislikes} />
       </div>
-      <div className="flex flex-shrink-0 flex-col gap-4 lg:gap-6 lg:w-2/3">
+      <div className="flex flex-shrink-0 flex-col gap-4 lg:w-2/3 lg:gap-6">
         <header>
           {title ? <Title>{title}</Title> : null}
           {artist ? (
