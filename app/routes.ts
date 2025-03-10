@@ -22,5 +22,4 @@ export default [
     route('preview', './routes/resource/preview.ts'),
     route('toggle-theme', './routes/resource/toggle-theme.ts'),
   ]),
-  // however your routes are defined
 ] satisfies RouteConfig

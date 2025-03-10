@@ -1,12 +1,12 @@
 import type {Config} from '@react-router/dev/config'
 import {vercelPreset} from '@vercel/react-router/vite'
-import type {Future} from 'react-router'
 
 declare module 'react-router' {
   interface Future {
-    unstable_middleware: true // 👈 Enable middleware types
+    unstable_middleware: true
   }
 }
+
 export default {
   presets: [vercelPreset()],
   future: {
