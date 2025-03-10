@@ -1,10 +1,28 @@
-# Full-featured Sanity Studio + React Router Vite Template
+# Full-featured Sanity Studio + React Router Template
 
 Batteries-included [React Router 7](https://reactrouter.com) website using Vite with [Vercel's deployment preset](https://vercel.com/docs/frameworks/react-router) with [Visual Editing](https://www.sanity.io/docs/visual-editing) for interactive live-preview inside [Presentation](https://www.sanity.io/docs/presentation) powered by an embedded [Sanity Studio](https://www.sanity.io/studio).
 
 ![Presentation tool in Sanity Studio](./img/sanity-remix-presentation.png)
 
 [Sanity Docs](https://sanity.io/docs) | [React Router Docs](https://reactrouter.com/home)
+
+- [Full-featured Sanity Studio + React Router Template](#full-featured-sanity-studio--react-router-template)
+  - [Installation: As a Sanity project template](#installation-as-a-sanity-project-template)
+  - [Installation: As a React Router template](#installation-as-a-react-router-template)
+    - [Seed the Studio with fake content](#seed-the-studio-with-fake-content)
+  - [Includes](#includes)
+    - [Embedded Studio](#embedded-studio)
+    - [Visual Editing for interactive live preview inside Presentation](#visual-editing-for-interactive-live-preview-inside-presentation)
+    - [Pre-configured Studio](#pre-configured-studio)
+    - [Portable Text component](#portable-text-component)
+    - [Image URL builder](#image-url-builder)
+    - [Example decorated input](#example-decorated-input)
+    - [Sanity Client mutation](#sanity-client-mutation)
+    - [Typed and validated responses](#typed-and-validated-responses)
+    - [Dynamic OG Image](#dynamic-og-image)
+    - [Other development choices](#other-development-choices)
+  - [Sanity Studio](#sanity-studio)
+  - [Deployment](#deployment)
 
 ## Installation: As a Sanity project template
 
