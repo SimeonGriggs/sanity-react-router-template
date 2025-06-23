@@ -22,7 +22,7 @@ export function Footer(props: LogoProps) {
           </a>
           <a
             className="hover:text-cyan-600 dark:hover:text-cyan-200"
-            href="https://github.com/SimeonGriggs/remix-sanity-studio-v3"
+            href="https://github.com/SimeonGriggs/sanity-react-router-template"
           >
             Star this project on GitHub
           </a>
