@@ -4,7 +4,7 @@ import {useEffect, useState} from 'react'
 
 let isHydrating = true
 
-export function Hydrated(props: PropsWithChildren): JSX.Element {
+export function Hydrated(props: PropsWithChildren) {
   const [isHydrated, setIsHydrated] = useState(!isHydrating)
 
   useEffect(() => {
@@ -12,5 +12,5 @@ export function Hydrated(props: PropsWithChildren): JSX.Element {
     setIsHydrated(true)
   }, [])
 
-  return isHydrated && props.children ? <>{props.children}</> : <></>
+  return isHydrated && props.children ? props.children : null
 }

@@ -11,7 +11,8 @@ export const recordType = defineType({
     {
       name: 'rating',
       title: 'Rating',
-      description: 'These fields are written to from the Remix front end',
+      description:
+        'These fields are written to from the React Router front end',
       options: {columns: 2},
     },
   ],

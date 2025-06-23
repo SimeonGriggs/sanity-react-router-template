@@ -1,4 +1,3 @@
-import type {LinksFunction, LoaderFunctionArgs} from 'react-router'
 import {
   data,
   isRouteErrorResponse,
@@ -7,19 +6,19 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from 'react-router'
 
 import {themePreferenceCookie} from '~/cookies'
 import {getBodyClassNames} from '~/lib/getBodyClassNames'
-import styles from '~/tailwind.css?url'
+import {projectDetails} from '~/sanity/projectDetails'
 import {themePreference} from '~/types/themePreference'
+import '~/styles/app.css'
 
 import type {Route} from './+types/root'
-import {useRootLoaderData} from './lib/useRootLoaderData'
 
-export const links: LinksFunction = () => {
+export const links: Route.LinksFunction = () => {
   return [
-    {rel: 'stylesheet', href: styles},
     {rel: 'preconnect', href: 'https://cdn.sanity.io'},
     {
       rel: 'preconnect',
@@ -38,26 +37,27 @@ export const links: LinksFunction = () => {
   ]
 }
 
-export const loader = async ({request}: LoaderFunctionArgs) => {
+export const loader = async ({request}: Route.LoaderArgs) => {
   // Dark/light mode
   const cookieHeader = request.headers.get('Cookie')
   const cookieValue = (await themePreferenceCookie.parse(cookieHeader)) || {}
   const theme = themePreference.parse(cookieValue.themePreference) || 'light'
   const bodyClassNames = getBodyClassNames(theme)
+  const {projectId, dataset, apiVersion} = projectDetails()
 
   return data({
     theme,
     bodyClassNames,
     ENV: {
-      VITE_SANITY_PROJECT_ID: import.meta.env.VITE_SANITY_PROJECT_ID!,
-      VITE_SANITY_DATASET: import.meta.env.VITE_SANITY_DATASET!,
-      VITE_SANITY_API_VERSION: import.meta.env.VITE_SANITY_API_VERSION!,
+      VITE_SANITY_PROJECT_ID: projectId,
+      VITE_SANITY_DATASET: dataset,
+      VITE_SANITY_API_VERSION: apiVersion,
     },
   })
 }
 
 export function Layout({children}: {children: React.ReactNode}) {
-  const {bodyClassNames, ENV} = useRootLoaderData()
+  const {bodyClassNames, ENV} = useLoaderData<typeof loader>()
 
   return (
     <html lang="en">
@@ -82,10 +82,8 @@ export function Layout({children}: {children: React.ReactNode}) {
   )
 }
 
-export default function App() {
-  const {theme} = useRootLoaderData()
-
-  return <Outlet context={{theme}} />
+export default function App({loaderData}: Route.ComponentProps) {
+  return <Outlet context={loaderData} />
 }
 
 export function ErrorBoundary({error}: Route.ErrorBoundaryProps) {

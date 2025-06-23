@@ -1,5 +1,4 @@
 import {useQuery} from '@sanity/react-loader'
-import {useLoaderData} from 'react-router'
 
 import {Record} from '~/components/Record'
 import {OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH} from '~/routes/resource/og'
@@ -11,11 +10,11 @@ import {type RecordDocument, recordZ} from '~/types/record'
 
 import type {Route} from './+types/$slug'
 
-export const meta = ({data, matches}: Route.MetaArgs) => {
+export const meta: Route.MetaFunction = ({data, matches}: Route.MetaArgs) => {
   const layoutData = matches.find(
-    (match) => match.id === `routes/website/layout`,
+    (match) => match?.id === `routes/website/layout`,
   )?.data
-  const home = layoutData ? layoutData.initial.data : null
+  const home = layoutData ? layoutData?.initial?.data : null
   const title = [data?.initial?.data?.title, home?.siteTitle]
     .filter(Boolean)
     .join(' | ')
