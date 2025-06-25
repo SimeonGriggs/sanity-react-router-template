@@ -130,7 +130,7 @@ The `record` type generates dynamic open graph images using the `~/routes/resour
 ### Other development choices
 
 - eslint and Prettier
-- Tailwind CSS with presets by [@sanity/demo](https://github.com/sanity-io/demo)
+- Tailwind CSS
 - Tailwind Prose and Prettier plugins
 
 ## Sanity Studio
