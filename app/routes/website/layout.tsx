@@ -51,7 +51,8 @@ export default function Website({loaderData}: Route.ComponentProps) {
   const {initial, query, params, sanity} = loaderData
   const {data: home} = useQuery<typeof initial.data>(query, params, {initial})
   const {pathname} = useLocation()
-  const {theme} = useOutletContext<{theme: ThemePreference}>()
+  const context = useOutletContext<{theme: ThemePreference} | null>()
+  const theme = context ? context.theme : 'light'
 
   return (
     <>

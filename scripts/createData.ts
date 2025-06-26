@@ -1,5 +1,5 @@
 import {faker} from '@faker-js/faker'
-import {htmlToBlocks} from '@sanity/block-tools'
+import {htmlToBlocks} from '@portabletext/block-tools'
 import {Schema} from '@sanity/schema'
 import {JSDOM} from 'jsdom'
 import type {FieldDefinition, SanityDocumentLike} from 'sanity'
@@ -40,7 +40,7 @@ async function createData() {
     _id: 'home',
     _type: 'home',
     title: 'Interactive live previews with Presentation',
-    siteTitle: 'Sanity ❤️ Remix',
+    siteTitle: 'Sanity ❤️ React Router',
   }
 
   const artists: SanityDocumentLike[] = []
